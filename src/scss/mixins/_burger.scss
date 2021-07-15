@@ -1,9 +1,9 @@
-@mixin burger {
+@mixin burger($burger-width, $burger-height, $burger-line-height) {
   position: relative;
   border: none;
   padding: 0;
-  width: var(--burger-width);
-  height: var(--burger-height);
+  width: $burger-width;
+  height: $burger-height;
   color: #000;
   background-color: transparent;
   cursor: pointer;
@@ -14,7 +14,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    height: var(--burger-line-height);
+    height: $burger-line-height;
     background-color: currentColor;
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
   }
@@ -24,7 +24,7 @@
   }
 
   &::after {
-    top: calc(100% - var(--burger-line-height));
+    top: calc(100% - $burger-line-height);
   }
 
   &__line {
@@ -32,7 +32,7 @@
     left: 0;
     top: 50%;
     width: 100%;
-    height: var(--burger-line-height);
+    height: $burger-line-height;
     background-color: currentColor;
     transform: translateY(-50%);
     transition: transform 0.3s ease-in-out;
