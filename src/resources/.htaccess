@@ -1,0 +1,89 @@
+
+  ############################################################################
+  #### Стандартный .htaccess для HTML сайтов                      0.1     ####
+  ############################################################################
+      # 1. Удалить www
+  RewriteCond %{ENV:HTTPS} on
+      #Если включен https
+  RewriteRule .* - [E=SSL:s]
+      #То создаем переменную  ssl с текстом s
+  RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+      # Проверяем, содержит ли домен www в начале URL.
+  RewriteRule ^(.*)$ http%{ENV:SSL}://%1/$1 [R=301,L]
+      # Перенаправляем удаляем www
+
+  ############################################################################
+  #### Перенаправляем протокол http на https                              ####
+  ############################################################################
+  RewriteCond %{HTTPS} off
+     # Проверяем наличие https в URL.
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+     # Перенаправляем протокол на http.
+
+
+  ############################################################################
+  #### Удаляем index.html из URL                                         ####
+  ############################################################################
+  RewriteRule ^(.*)index\.html$ https://%{HTTP_HOST}/$1 [R=301,L]
+  RewriteRule ^(.*)index\.htm$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+############################################################################
+#### Компрессия статического контента для гугл  спид тест               ####
+############################################################################
+<IfModule mod_deflate.c>
+  AddType image/svg+xml .svg
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+  ExpiresByType application/x-font-ttf "access plus 1 year"
+  ExpiresByType application/x-font-opentype "access plus 1 year"
+  ExpiresByType application/x-font-woff "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>
+  <IfModule mod_headers.c>
+  <filesmatch "\.(ico|flv|jpg|jpeg|webp|png|gif|css|swf|woff|pdf)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </filesmatch>
+  <filesmatch "\.(html|htm)$">
+    Header set Cache-Control "max-age=7200, private, must-revalidate"
+  </filesmatch>
+  <filesmatch "\.(pdf)$">
+    Header set Cache-Control "max-age=86400, public"
+  </filesmatch>
+  <filesmatch "\.(js|otf|ttf|woff|woff2)$">
+    Header set Cache-Control "max-age=31536000, private"
+  </filesmatch>
+  </IfModule>
+############################################################################
+#### Конец общей части, далее следует собственные директивы .htaccess   ####
+############################################################################
