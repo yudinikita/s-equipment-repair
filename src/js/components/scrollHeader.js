@@ -10,15 +10,15 @@ window.addEventListener("scroll", () => {
   let scrollDistance = window.scrollY;
 
   if (scrollDistance > lastScrollTop) {
-    header.classList.remove("header--fixed");
+    header.classList.remove("header-fixed");
     hero.style.marginTop = null;
   } else if (scrollDistance < lastScrollTop) {
-    header.classList.add("header--fixed");
+    header.classList.add("header-fixed");
     hero.style.marginTop = `${headerHeight}px`;
   }
 
   if (scrollDistance === 0) {
-    header.classList.remove("header--fixed");
+    header.classList.remove("header-fixed");
     hero.style.marginTop = null;
   }
 

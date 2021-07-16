@@ -1,17 +1,18 @@
 <header class="header header__container">
   <div class="header__left">
     <a href="#" class="header__logo">
-      <img class="page-header__logo-image" src="../img/logo.svg" width="258" height="29"
+      <img class="header__logo-image" src="../img/logo.svg" width="258" height="30"
         alt="Логотип компании Частные мастера. Ремонт бытовой техники." />
     </a>
   </div>
 
   <div class="header__center">
     <nav class="nav">
-      <button class="nav__hamburger hamburger--squeeze" type="button" aria-label="меню" aria-controls="navigation">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
+      <button class="nav__hamburger hamburger--squeeze" type="button" aria-label="меню" aria-controls="navigation" onclick="openNav()">
+        <span class="nav__hamburger-box">
+          <span class="nav__hamburger-inner"></span>
         </span>
+        <span class="visually-hidden">Открыть меню</span>
       </button>
       <ul class="nav__list list-reset">
         <li class="nav__item"><a href="#" class="nav__link">Цены</a></li>
@@ -20,6 +21,22 @@
         <li class="nav__item"><a href="#" class="nav__link">Преимущества</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
       </ul>
+      <div class="mobile__menu">
+        <div class="mobile__menu-content">
+          <a href="tel:+79209864177" class="mobile__tel">+7 920 986 41 77</a>
+          <a href="tel:+79209864177" class="mobile__tel mobile__tel-second">+7 920 986 41 77</a>
+          <ul class="mobile__menu-list list-reset">
+            <li class="mobile__menu-item"><a href="#" class="mobile__menu-link">Цены</a></li>
+            <li class="mobile__menu-item"><a href="#" class="mobile__menu-link">Порядок работы</a></li>
+            <li class="mobile__menu-item"><a href="#" class="mobile__menu-link">О нас</a></li>
+            <li class="mobile__menu-item"><a href="#" class="mobile__menu-link">Преимущества</a></li>
+            <li class="mobile__menu-item"><a href="#" class="mobile__menu-link">Отзывы</a></li>
+          </ul>
+          <a href="#" class="mobile__menu-button">
+            Оставить заявку
+          </a>
+        </div>
+      </div>
     </nav>
   </div>
 
@@ -31,8 +48,14 @@
       </svg>
     </span>
 
-    <button class="btn btn-reset header__button">
+    <a href="#" class="header__button">
       Оставить заявку
-    </button>
+    </a>
+
+    <a href="tel:+79209864177" class="header__phone-icon">
+      <img class="header__phone-icon-image" src="../img/icon-tel.svg" width="19" height="19"
+        alt="Кнопка позвонить Частным мастерам" />
+      <span class="visually-hidden">Позвонить мастеру</span>
+    </a>
   </div>
 </header>
