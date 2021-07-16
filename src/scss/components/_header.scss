@@ -1,85 +1,101 @@
+.price {
+  height: 3000px;
+}
+
 .header {
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  top: -100px;
   width: 100%;
   height: 100px;
   background-color: #fff;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: top 300ms ease-in-out 300ms;
+  }
+
+  &__logo {
+    padding-left: 60px;
+  }
+
+  &__phone {
+    padding-right: 100px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 130%;
+
+    &-icon-arrow {
+      vertical-align: middle;
+    }
+  }
+
+  &__button {
+    padding-bottom: 2px;
+    width: 288px;
+    height: 100px;
+    font-weight: 700;
+    font-size: 20px;
+    color: $color-brand;
+    background-color: $color-brand-light-1;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: $color-brand;
+    }
+
+    &:active {
+      color: #fff;
+      background-color: $color-brand-dark-7;
+    }
+  }
 }
 
-.header__logo {
-  padding-left: 60px;
-}
+.nav {
+  &__hamburger {
+    display: none;
+  }
 
-.hamburger {
-  display: none;
-}
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-bottom: 2px;
+    width: 700px;
+    font-size: 20px;
+    line-height: 130%;
+  }
 
-.nav__list {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding-bottom: 2px;
-  width: 700px;
-  font-size: 20px;
-  line-height: 130%;
-}
+  &__link {
+    color: $color-gray-8;
 
-.nav__link {
-  color: $color-gray-8;
-}
+    &:hover,
+    &:focus {
+      color: $color-brand;
+    }
 
-.nav__link:hover,
-.nav__link:focus {
-  color: $color-brand;
-}
-
-.nav__link:active {
-  color: $color-brand-dark-7;
-}
-
-.header__phone {
-  padding-right: 100px;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 130%;
-}
-
-.phone-icon-arrow {
-  vertical-align: middle;
-}
-
-.header__button {
-  padding-bottom: 2px;
-  width: 288px;
-  height: 100px;
-  font-weight: 700;
-  font-size: 20px;
-  color: $color-brand;
-  background-color: $color-brand-light-1;
-}
-
-.header__button:hover,
-.header__button:focus {
-  color: #fff;
-  background-color: $color-brand;
-}
-
-.header__button:active {
-  color: #fff;
-  background-color: $color-brand-dark-7;
+    &:active {
+      color: $color-brand-dark-7;
+    }
+  }
 }
 
 @media (max-width: (1700px)) {
-  .hamburger {
-    display: inline-block;
-  }
+  .nav {
+    &__hamburger {
+      display: inline-block;
+    }
 
-  .nav__list {
-    display: none;
+    &__list {
+      display: none;
+    }
   }
 }
 

@@ -1,0 +1,1 @@
+<section class="price"></section>

@@ -1,4 +1,4 @@
-.hamburger {
+.nav__hamburger {
   display: inline-block;
   overflow: visible;
   margin: 0;
@@ -14,17 +14,17 @@
   cursor: pointer;
 }
 
-.hamburger:hover {
+.nav__hamburger:hover {
   opacity: 0.7;
 }
 
-.hamburger.is-active:hover {
+.nav__hamburger.is-active:hover {
   opacity: 0.7;
 }
 
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner::after {
+.nav__hamburger.is-active .hamburger-inner,
+.nav__hamburger.is-active .hamburger-inner::before,
+.nav__hamburger.is-active .hamburger-inner::after {
   background-color: #4c4c4c;
 }
 
@@ -52,10 +52,6 @@
   transition-property: transform;
   transition-duration: 0.15s;
   transition-timing-function: ease;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
 }
 
 .hamburger-inner::before,
