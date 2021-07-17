@@ -1,0 +1,77 @@
+.footer {
+  margin: 100px 30px;
+  font-size: 24px;
+  line-height: 160%;
+  text-align: center;
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &-el {
+      padding: 0 37px;
+      padding-top: 30px;
+    }
+  }
+
+  &__tel {
+    &-link {
+      color: #000;
+      transition: color 300ms ease-in-out;
+
+      &:hover {
+        color: $color-brand;
+      }
+
+      &:active {
+        color: $color-brand-dark-7;
+      }
+    }
+  }
+
+  &__whatsapp {
+    &-label {
+      vertical-align: super;
+      font-weight: 600;
+      color: $color-succes;
+      transition: color 300ms ease-in-out;
+
+      &:hover {
+        color: #83e46b;
+      }
+
+      &:active {
+        color: #177300;
+      }
+    }
+  }
+
+  &__backcall {
+    &-link {
+      font-weight: 600;
+      color: $color-brand;
+      transition: color 300ms ease-in-out;
+
+      &:hover {
+        color: $color-brand-light-4;
+      }
+
+      &:active {
+        color: $color-brand-dark-7;
+      }
+    }
+  }
+
+  &__copyright {
+    margin-top: 60px;
+    color: $color-gray-6;
+  }
+}
+
+@media (max-width: 435px) {
+  .footer__mail {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
