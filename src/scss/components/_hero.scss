@@ -1,0 +1,137 @@
+.hero {
+  display: flex;
+
+  &__left {
+    padding: 60px;
+    padding-top: 56px;
+  }
+
+  &__title {
+    max-width: 480px;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 140%;
+  }
+
+  &__advantages {
+    list-style: none;
+    margin: 0;
+    margin-bottom: 87px;
+    padding-top: 45px;
+    padding-left: 0;
+
+    &-el {
+      position: relative;
+      font-size: 24px;
+      line-height: 160%;
+
+      &:not(:first-child) {
+        margin-top: 25px;
+      }
+    }
+
+    &-money::before {
+      content: url("../img/sprite.svg#icon-money");
+      display: inline-block;
+      vertical-align: sub;
+      margin-right: 25px;
+      width: 35px;
+    }
+
+    &-car::before {
+      content: url("../img/sprite.svg#icon-car");
+      display: inline-block;
+      vertical-align: sub;
+      margin-right: 25px;
+      width: 35px;
+    }
+
+    &-smile::before {
+      content: url("../img/sprite.svg#icon-smile");
+      display: inline-block;
+      vertical-align: sub;
+      margin-right: 25px;
+      width: 35px;
+    }
+
+    &-guarantee::before {
+      content: url("../img/sprite.svg#icon-guarantee");
+      display: inline-block;
+      vertical-align: sub;
+      margin-right: 25px;
+      width: 35px;
+    }
+
+    &-covid::before {
+      content: url("../img/sprite.svg#icon-covid");
+      display: inline-block;
+      vertical-align: sub;
+      margin-right: 25px;
+      width: 35px;
+    }
+  }
+
+  &__inf {
+    position: relative;
+    display: inline-block;
+    color: $color-gray-5;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+
+    &-text {
+      position: absolute;
+      top: -50px;
+      z-index: 500;
+      margin-left: 10px;
+      border: $color-gray-2 1px solid;
+      border-radius: 12px;
+      padding: 20px;
+      width: 500px;
+      font-size: 15px;
+      line-height: 130%;
+      text-align: left;
+      color: #000;
+      background-color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 300ms ease-in-out;
+    }
+
+    &:hover {
+      color: $color-brand;
+    }
+
+    &:hover &-text {
+      opacity: 1;
+      visibility: visible;
+
+      &:hover {
+        border-color: $color-brand;
+      }
+    }
+  }
+
+  &__button {
+    border: $color-brand 2px solid;
+    border-radius: 50px;
+    padding: 27px 40px;
+    width: 240px;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 19px;
+    color: $color-brand;
+    background-color: #fff;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      color: #fff;
+      background-color: $color-brand;
+    }
+
+    &:active {
+      color: #fff;
+      background-color: $color-brand-dark-7;
+    }
+  }
+}

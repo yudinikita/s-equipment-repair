@@ -1,0 +1,17 @@
+.order {
+  &__content {
+    display: flex;
+  }
+
+  &__one img {
+    clip-path: polygon(92% 0, 100% 50%, 92% 100%, 0% 100%, 0% 0%);
+  }
+
+  &__second img {
+    clip-path: polygon(92% 0, 100% 50%, 92% 100%, 0% 100%, 8% 50%, 0% 0%);
+  }
+
+  &__third img {
+    clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 8% 50%, 0% 0%);
+  }
+}
