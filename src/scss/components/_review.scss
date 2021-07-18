@@ -37,10 +37,12 @@
     display: flex;
     flex-direction: column;
     max-width: fit-content;
+  }
 
-    &-stars {
-      margin: 0 auto;
-    }
+  &__raiting {
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
   }
 
   &__textblock {

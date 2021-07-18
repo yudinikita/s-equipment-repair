@@ -1,0 +1,18 @@
+.stars-raiting {
+  width: 265px;
+
+  &-star {
+    padding: 0 4.5px;
+    font-size: 32px;
+    line-height: 1;
+    color: $color-gray-3;
+
+    &::before {
+      content: "★";
+    }
+
+    &-active {
+      color: $color-brand;
+    }
+  }
+}

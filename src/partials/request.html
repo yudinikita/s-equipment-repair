@@ -1,0 +1,43 @@
+<section class="request">
+  <h2 class="titleh2 request__title">Оставить заявку</h2>
+  <div class="request__container">
+    <img class="request__image" src="./img/request.jpg" alt="Женщина звонит мастеру по ремонту">
+    <div class="request__content">
+      <div class="request__form">
+        <form class="request__form-request" action="#" method="post">
+          <ul class="request__form-list list-reset">
+            <li>
+              <label for="name">
+                <input type="text" id="name" name="user_name">
+              </label>
+            </li>
+            <li>
+              <label for="tel">
+                <input type="tel" id="tel" name="user_tel">
+              </label>
+            </li>
+            <li>
+              <select size="1" name="brand[]">
+                <option value="" disabled selected>Бренд стиральной машинки</option>
+                <option value="Я не знаю">Я не знаю</option>
+                <option value="Haier">Haier</option>
+                <option value="Hotpoint">Hotpoint</option>
+                <option value="Bosh">Bosh</option>
+                <option value="ASKO">ASKO</option>
+                <option value="Whirlpool">Whirlpool</option>
+              </select>
+            </li>
+            <li>
+              <label for="msg">
+                <textarea id="msg" name="user_message"></textarea>
+              </label>
+            </li>
+            <li>
+              <input class="request__form-submit btn-reset" type="submit" value="Вызвать мастера">
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
