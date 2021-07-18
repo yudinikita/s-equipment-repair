@@ -1,0 +1,11 @@
+.brand {
+  &__grid {
+    display: grid;
+    justify-items: center;
+    grid-gap: 3rem 4rem;
+    grid-template-columns: repeat(5, minmax(300px, 1fr));
+    margin: 0 auto;
+    max-width: 1800px;
+    text-align: center;
+  }
+}
