@@ -7,17 +7,17 @@
         <form class="request__form-request" action="#" method="post">
           <ul class="request__form-list list-reset">
             <li>
-              <label for="name">
-                <input type="text" id="name" name="user_name">
+              <label class="request__label request__label-name request__label-write" for="name">
+                <input class="request__input" type="text" id="name" name="user_name">
               </label>
             </li>
             <li>
-              <label for="tel">
-                <input type="tel" id="tel" name="user_tel">
+              <label class="request__label request__label-tel" for="tel">
+                <input class="request__input" type="tel" id="tel" name="user_tel">
               </label>
             </li>
             <li>
-              <select size="1" name="brand[]">
+              <select class="request__input request__input-select" size="1" name="brand[]">
                 <option value="" disabled selected>Бренд стиральной машинки</option>
                 <option value="Я не знаю">Я не знаю</option>
                 <option value="Haier">Haier</option>
@@ -28,8 +28,8 @@
               </select>
             </li>
             <li>
-              <label for="msg">
-                <textarea id="msg" name="user_message"></textarea>
+              <label class="request__label request__label-msg" for="msg">
+                <textarea class="request__input request__input-msg" id="msg" name="user_message"></textarea>
               </label>
             </li>
             <li>
@@ -37,6 +37,10 @@
             </li>
           </ul>
         </form>
+      </div>
+      <div class="request__politic">
+        <p>Отправляя заявку, я&nbsp;соглашаюсь с&nbsp;условиями</p>
+        <a href="#" class="request__politic-link">Политики конфиденциальности</a>
       </div>
     </div>
   </div>
