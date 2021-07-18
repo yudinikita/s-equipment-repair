@@ -1,0 +1,106 @@
+.review {
+  &__titlebtn {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  &__writecomment {
+    margin-left: 35px;
+    height: 100%;
+    color: $color-gray-8;
+    transition: color 300ms ease-in-out;
+
+    &:hover {
+      color: $color-brand;
+    }
+
+    &:active {
+      color: $color-brand-dark-7;
+    }
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+
+  &__comment {
+    display: flex;
+
+    &:not(:first-child) {
+      margin-top: 70px;
+    }
+  }
+
+  &__person {
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+
+    &-stars {
+      margin: 0 auto;
+    }
+  }
+
+  &__textblock {
+    margin-left: 50px;
+    max-width: 1000px;
+  }
+
+  &__namedate {
+    display: flex;
+    align-items: baseline;
+
+    &-name {
+      font-family: "Open Sans", "Arial", sans-serif;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 130%;
+    }
+
+    &-date {
+      margin-left: 35px;
+      font-size: 18px;
+      line-height: 130%;
+      color: $color-gray-9;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-top: 15px;
+    font-size: 24px;
+    line-height: 160%;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__button {
+    margin-top: 45px;
+    border: 1px solid $color-gray-3;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 130%;
+    color: $color-gray-9;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      border-color: $color-brand;
+      font-weight: 600;
+      color: #fff;
+      background-color: $color-brand;
+    }
+
+    &:active {
+      border-color: $color-brand-dark-7;
+      font-weight: 600;
+      color: #fff;
+      background-color: $color-brand-dark-7;
+    }
+  }
+}
