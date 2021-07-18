@@ -25,7 +25,6 @@ const clean = () => {
   return del(["app/*"]);
 };
 
-//svg sprite
 const svgSprites = () => {
   return src("./src/img/svg/**.svg")
     .pipe(
@@ -33,6 +32,20 @@ const svgSprites = () => {
         mode: {
           stack: {
             sprite: "../sprite.svg", //sprite file name
+          },
+        },
+      })
+    )
+    .pipe(dest("./app/img"));
+};
+
+const svgSpritesBrand = () => {
+  return src("./src/img/svg/brand/**.svg")
+    .pipe(
+      svgSprite({
+        mode: {
+          stack: {
+            sprite: "../spriteBrand.svg", //sprite file name
           },
         },
       })
@@ -147,6 +160,7 @@ const watchFiles = () => {
   watch("./src/img/*.{jpg,jpeg,png,svg}", images);
   watch("./src/img/**/*.{jpg,jpeg,png}", images);
   watch("./src/img/svg/**.svg", svgSprites);
+  watch("./src/img/svg/brand/**.svg", svgSpritesBrand);
 };
 
 const cache = () => {
@@ -201,6 +215,7 @@ exports.default = series(
   resources,
   images,
   svgSprites,
+  svgSpritesBrand,
   watchFiles
 );
 
@@ -213,6 +228,7 @@ exports.build = series(
   resources,
   images,
   svgSprites,
+  svgSpritesBrand,
   htmlMinify
 );
 
@@ -226,5 +242,6 @@ exports.backend = series(
   stylesBackend,
   resources,
   images,
-  svgSprites
+  svgSprites,
+  svgSpritesBrand
 );

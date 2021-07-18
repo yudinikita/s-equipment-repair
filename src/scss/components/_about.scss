@@ -1,0 +1,19 @@
+.about {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    padding-top: 20px;
+    padding-left: 60px;
+    max-width: 850px;
+    font-size: 24px;
+    line-height: 160%;
+
+    b {
+      font-weight: 600;
+      color: $color-brand;
+    }
+  }
+}
