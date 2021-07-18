@@ -26,6 +26,13 @@
       font-size: 24px;
       line-height: 160%;
 
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 25px;
+        width: 35px;
+      }
+
       &:not(:first-child) {
         margin-top: 25px;
       }
@@ -33,42 +40,22 @@
 
     &-money::before {
       content: url("../img/sprite.svg#icon-money");
-      display: inline-block;
-      vertical-align: sub;
-      margin-right: 25px;
-      width: 35px;
     }
 
     &-car::before {
       content: url("../img/sprite.svg#icon-car");
-      display: inline-block;
-      vertical-align: sub;
-      margin-right: 25px;
-      width: 35px;
     }
 
     &-smile::before {
       content: url("../img/sprite.svg#icon-smile");
-      display: inline-block;
-      vertical-align: sub;
-      margin-right: 25px;
-      width: 35px;
     }
 
     &-guarantee::before {
       content: url("../img/sprite.svg#icon-guarantee");
-      display: inline-block;
-      vertical-align: sub;
-      margin-right: 25px;
-      width: 35px;
     }
 
     &-covid::before {
       content: url("../img/sprite.svg#icon-covid");
-      display: inline-block;
-      vertical-align: sub;
-      margin-right: 25px;
-      width: 35px;
     }
   }
 
