@@ -7,34 +7,27 @@
         <form class="request__form-request" action="#" method="post">
           <ul class="request__form-list list-reset">
             <li>
-              <label class="request__label request__label-name request__label-write" for="name">
-                <input class="request__input" type="text" id="name" name="user_name">
+              <label class="request__label request__label-name" for="name">
+                <input class="request__input request__input-req request__input-name" type="text" id="name" name="user_name" pattern="[A-Za-zА-Яа-яЁё]{2,}" minlength="2" maxlength="50" required>
               </label>
             </li>
             <li>
               <label class="request__label request__label-tel" for="tel">
-                <input class="request__input" type="tel" id="tel" name="user_tel">
+                <input class="request__input request__input-req request__input-tel" type="tel" id="tel" name="user_tel" pattern="\+?[0-9\s\-\(\)]+" minlength="11" maxlength="20" required>
               </label>
             </li>
             <li>
-              <select class="request__input request__input-select" size="1" name="brand[]">
-                <option value="" disabled selected>Бренд стиральной машинки</option>
-                <option value="Я не знаю">Я не знаю</option>
-                <option value="Нет в списке">Нет в списке</option>
-                <option value="Haier">Haier</option>
-                <option value="Hotpoint">Hotpoint</option>
-                <option value="Bosh">Bosh</option>
-                <option value="ASKO">ASKO</option>
-                <option value="Whirlpool">Whirlpool</option>
-              </select>
-            </li>
+              <label class="request__label request__label-select" for="select">
+                <input class="request__input request__input-select" type="text" id="select" name="user_select" pattern="[A-Za-zА-Яа-яЁё]{2,}" maxlength="50">
+              </label>
+          </li>
             <li>
-              <label class="request__label request__label-msg request__label-msg-write" for="msg">
-                <textarea class="request__input request__input-msg" id="msg" name="user_message"></textarea>
+              <label class="request__label request__label-msg" for="msg">
+                <textarea class="request__input request__input-msg" id="msg" name="user_message" maxlength="224"></textarea>
               </label>
             </li>
             <li>
-              <input class="request__form-submit btn-reset" type="submit" disabled value="Вызвать мастера">
+              <input class="request__form-submit btn-reset" type="submit" value="Вызвать мастера" disabled>
             </li>
           </ul>
         </form>
