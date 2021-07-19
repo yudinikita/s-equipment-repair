@@ -3,13 +3,22 @@
     display: flex;
   }
 
+  &__left {
+    height: 100%;
+
+    img {
+      max-height: 100vh;
+      object-fit: cover;
+    }
+  }
+
   &__right {
     position: relative;
     overflow-x: auto;
     overflow-y: auto;
     width: 100%;
     max-width: 855px;
-    max-height: 982px;
+    max-height: 100vh;
     -ms-overflow-style: none;
     scrollbar-width: none;
 
@@ -66,6 +75,33 @@
         td {
           cursor: default;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .price {
+    &__wrapper {
+      flex-wrap: wrap;
+    }
+
+    &__left {
+      img {
+        max-height: 70vh;
+      }
+    }
+
+    &__right {
+      max-width: 100%;
+      max-height: 70vh;
+    }
+
+    &__table {
+      width: 100%;
+
+      th {
+        top: -4px;
       }
     }
   }
