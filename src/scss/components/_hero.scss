@@ -4,6 +4,7 @@
   &__left {
     padding: 60px;
     padding-top: 56px;
+    min-width: fit-content;
   }
 
   &__title {
@@ -99,6 +100,12 @@
     }
   }
 
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   &__button {
     border: $color-brand 2px solid;
     border-radius: 50px;
@@ -119,6 +126,77 @@
     &:active {
       color: #fff;
       background-color: $color-brand-dark-7;
+    }
+  }
+}
+
+@media (max-width: $desktop) {
+  .hero {
+    flex-wrap: wrap;
+
+    &__right {
+      order: -1;
+      max-height: 320px;
+    }
+
+    &__image {
+      object-position: top;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .hero {
+    flex-wrap: wrap;
+
+    &__title {
+      max-width: 480px;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 140%;
+    }
+
+    &__left {
+      padding-top: 25px;
+    }
+
+    &__right {
+      order: -1;
+      max-height: 320px;
+    }
+
+    &__image {
+      max-height: 232px;
+      object-position: initial;
+    }
+
+    &__inf {
+      display: none;
+    }
+
+    &__advantages {
+      list-style: none;
+      margin: 0;
+      margin-bottom: 57px;
+      padding-top: 20px;
+      padding-left: 0;
+
+      &-el {
+        position: relative;
+        font-size: 16px;
+        line-height: 160%;
+
+        &::before {
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 15px;
+          width: 30px;
+        }
+
+        &:not(:first-child) {
+          margin-top: 20px;
+        }
+      }
     }
   }
 }
