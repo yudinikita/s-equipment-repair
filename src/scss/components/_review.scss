@@ -31,6 +31,10 @@
     &:not(:first-child) {
       margin-top: 70px;
     }
+
+    &-hidden {
+      display: none;
+    }
   }
 
   &__person {
