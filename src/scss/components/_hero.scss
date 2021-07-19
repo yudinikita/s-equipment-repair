@@ -157,6 +157,7 @@
     }
 
     &__left {
+      padding: 30px;
       padding-top: 25px;
     }
 
@@ -194,7 +195,7 @@
         }
 
         &:not(:first-child) {
-          margin-top: 20px;
+          margin-top: 0;
         }
       }
     }
