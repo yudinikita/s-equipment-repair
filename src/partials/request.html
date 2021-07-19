@@ -20,6 +20,7 @@
               <select class="request__input request__input-select" size="1" name="brand[]">
                 <option value="" disabled selected>Бренд стиральной машинки</option>
                 <option value="Я не знаю">Я не знаю</option>
+                <option value="Нет в списке">Нет в списке</option>
                 <option value="Haier">Haier</option>
                 <option value="Hotpoint">Hotpoint</option>
                 <option value="Bosh">Bosh</option>
@@ -28,19 +29,19 @@
               </select>
             </li>
             <li>
-              <label class="request__label request__label-msg" for="msg">
+              <label class="request__label request__label-msg request__label-msg-write" for="msg">
                 <textarea class="request__input request__input-msg" id="msg" name="user_message"></textarea>
               </label>
             </li>
             <li>
-              <input class="request__form-submit btn-reset" type="submit" value="Вызвать мастера">
+              <input class="request__form-submit btn-reset" type="submit" disabled value="Вызвать мастера">
             </li>
           </ul>
         </form>
-      </div>
-      <div class="request__politic">
-        <p>Отправляя заявку, я&nbsp;соглашаюсь с&nbsp;условиями</p>
-        <a href="#" class="request__politic-link">Политики конфиденциальности</a>
+        <div class="request__politic">
+          <p class="request__politic-text">Отправляя заявку, я&nbsp;соглашаюсь с&nbsp;условиями</p>
+          <a href="#" class="request__politic-link">Политики конфиденциальности</a>
+        </div>
       </div>
     </div>
   </div>
