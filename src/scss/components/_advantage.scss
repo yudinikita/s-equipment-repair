@@ -25,8 +25,31 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: $tablet) {
   .advantage__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: $mobile) {
+  .advantage {
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__subtitle {
+      margin: 10px auto;
+      padding: 0 30px;
+      font-size: 18px;
+      line-height: 150%;
+    }
+
+    &__desc {
+      margin: 0 auto;
+      padding: 0 30px;
+      font-size: 16px;
+      line-height: 160%;
+      text-align: center;
+    }
   }
 }
