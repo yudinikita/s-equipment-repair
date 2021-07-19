@@ -142,6 +142,10 @@
     &__image {
       object-position: top;
     }
+
+    &__inf {
+      display: none;
+    }
   }
 }
 
@@ -169,10 +173,6 @@
     &__image {
       max-height: 232px;
       object-position: initial;
-    }
-
-    &__inf {
-      display: none;
     }
 
     &__advantages {
