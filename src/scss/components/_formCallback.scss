@@ -1,0 +1,121 @@
+.formcallback {
+  position: fixed;
+  right: 350px;
+  z-index: 5000;
+  display: none;
+  border-radius: 0 0 12px 12px;
+  padding: 30px;
+  background-color: #fff;
+
+  &__title {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+  }
+
+  &__form {
+    margin: 20px auto;
+
+    &-list {
+      li:not(:first-child) {
+        padding-top: 20px;
+      }
+    }
+
+    &-submit {
+      border-radius: 12px;
+      width: 400px;
+      height: 68px;
+      font-family: "Open Sans", "Arial", sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 140%;
+      text-align: center;
+      color: $color-brand;
+      background-color: $color-brand-light-1;
+      transition: all 300ms ease-in-out;
+
+      &:hover {
+        color: #fff;
+        background-color: $color-brand;
+      }
+
+      &:active {
+        color: #fff;
+        background-color: $color-brand-dark-7;
+      }
+    }
+  }
+
+  &__input {
+    border: 1px solid $color-gray-7;
+    border-radius: 12px;
+    padding: 0 25px;
+    width: 400px;
+    height: 68px;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 20px;
+    line-height: 140px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__desc {
+    margin: 10px auto;
+    max-width: 400px;
+    font-size: 20px;
+    line-height: 180%;
+    text-align: center;
+  }
+
+  &__tel {
+    text-align: center;
+
+    &-icon {
+      vertical-align: text-bottom;
+      margin-right: 10px;
+      filter: brightness(0.1);
+    }
+
+    &-link {
+      font-family: "Open Sans", "Arial", sans-serif;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 130%;
+      color: #000;
+      transition: color 300ms ease-in-out;
+
+      &:hover {
+        color: $color-brand;
+      }
+    }
+  }
+
+  &__privacy {
+    max-width: 400px;
+    font-size: 16px;
+    line-height: 180%;
+    text-align: center;
+    transition: color 300ms ease-in-out;
+
+    &-text {
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    &-link {
+      color: $color-gray-6;
+
+      &:hover {
+        color: $color-brand;
+      }
+    }
+  }
+}
+
+.showform {
+  display: block;
+}
