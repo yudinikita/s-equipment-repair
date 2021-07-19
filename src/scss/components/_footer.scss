@@ -75,3 +75,23 @@
     padding-left: 0;
   }
 }
+
+@media (max-width: $mobile) {
+  .footer {
+    margin-top: 50px;
+    font-size: 18px;
+
+    &__menu {
+      flex-direction: column;
+    }
+
+    &__whatsapp-icon {
+      margin-top: -4px;
+      width: 27px;
+    }
+
+    &__copyright {
+      font-size: 16px;
+    }
+  }
+}
