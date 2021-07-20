@@ -10,8 +10,8 @@ $c = true;
 if ( $method === 'POST' ) {
 
 	$project_name = "Частные мастера";
-	$admin_email  = "nikitayudin782@gmail.com";
-	$form_subject = "mail@bytovoi-remont.ru";
+	$admin_email  = "mail@bytovoi-remont.ru";
+	$form_subject = trim($_POST["form_subject"]);
 
 	foreach ( $_POST as $key => $value ) {
 		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
@@ -27,7 +27,7 @@ if ( $method === 'POST' ) {
 
 	$project_name = "Частные мастера";
 	$admin_email  = "nikitayudin782@gmail.com";
-	$form_subject = "mail@bytovoi-remont.ru";
+	$form_subject = trim($_POST["form_subject"]);
 
 	foreach ( $_GET as $key => $value ) {
 		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
