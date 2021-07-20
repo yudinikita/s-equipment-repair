@@ -129,7 +129,7 @@ const images = () => {
     "./src/img/**/*.png",
     "./src/img/**/*.jpeg",
     "./src/img/**/*.webp",
-    "./src/img/favicons/safari-pinned-tab.svg",
+    "./src/img/**/safari-pinned-tab.svg",
   ])
     .pipe(gulpif(isProd, image()))
     .pipe(dest("./app/img"));
