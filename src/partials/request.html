@@ -9,21 +9,21 @@
     </div>
     <div class="request__content">
       <div class="request__form">
-        <form class="request__form-request" action="#" method="post">
+        <form class="request__form-request" action="mailRequest.php" method="post">
           <ul class="request__form-list list-reset">
             <li>
               <label class="request__label request__label-name" for="name">
-                <input class="request__input request__input-req request__input-name" type="text" id="name" name="user_name" pattern="[A-Za-zА-Яа-яЁё]{2,}" minlength="2" maxlength="50" required>
+                <input class="request__input request__input-req request__input-name" type="text" id="name" name="user_name" minlength="2" maxlength="50" required>
               </label>
             </li>
             <li>
               <label class="request__label request__label-tel" for="tel">
-                <input class="request__input request__input-req request__input-tel" type="tel" id="tel" name="user_tel" pattern="\+?[0-9\s\-\(\)]+" minlength="11" maxlength="20" required>
+                <input class="request__input request__input-req request__input-tel" type="tel" id="tel" name="user_tel" minlength="2" maxlength="20" required>
               </label>
             </li>
             <li>
               <label class="request__label request__label-select" for="select">
-                <input class="request__input request__input-select" type="text" id="select" name="user_select" pattern="[A-Za-zА-Яа-яЁё]{2,}" maxlength="50">
+                <input class="request__input request__input-select" type="text" id="select" name="user_select" maxlength="50">
               </label>
           </li>
             <li>
