@@ -124,9 +124,11 @@ const images = () => {
     "./src/img/**.png",
     "./src/img/**.jpeg",
     "./src/img/*.svg",
+    "./src/img/*.webp",
     "./src/img/**/*.jpg",
     "./src/img/**/*.png",
     "./src/img/**/*.jpeg",
+    "./src/img/**/*.webp",
     "./src/img/favicons/safari-pinned-tab.svg",
   ])
     .pipe(gulpif(isProd, image()))
@@ -157,8 +159,8 @@ const watchFiles = () => {
   watch("./src/partials/*.html", htmlInclude);
   watch("./src/*.html", htmlInclude);
   watch("./src/resources/**", resources);
-  watch("./src/img/*.{jpg,jpeg,png,svg}", images);
-  watch("./src/img/**/*.{jpg,jpeg,png}", images);
+  watch("./src/img/*.{jpg,jpeg,png,svg,webp}", images);
+  watch("./src/img/**/*.{jpg,jpeg,png,webp}", images);
   watch("./src/img/svg/**.svg", svgSprites);
   watch("./src/img/svg/brand/**.svg", svgSpritesBrand);
 };
