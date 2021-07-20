@@ -9,9 +9,9 @@ var_dump($_GET);
 $c = true;
 if ( $method === 'POST' ) {
 
-	$project_name = trim($_POST["project_name"]);
-	$admin_email  = trim($_POST["admin_email"]);
-	$form_subject = trim($_POST["form_subject"]);
+	$project_name = "Частные мастера";
+	$admin_email  = "nikitayudin782@gmail.com";
+	$form_subject = "mail@bytovoi-remont.ru";
 
 	foreach ( $_POST as $key => $value ) {
 		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
@@ -25,9 +25,9 @@ if ( $method === 'POST' ) {
 	}
 } else if ( $method === 'GET' ) {
 
-	$project_name = trim($_GET["project_name"]);
-	$admin_email  = trim($_GET["admin_email"]);
-	$form_subject = trim($_GET["form_subject"]);
+	$project_name = "Частные мастера";
+	$admin_email  = "nikitayudin782@gmail.com";
+	$form_subject = "mail@bytovoi-remont.ru";
 
 	foreach ( $_GET as $key => $value ) {
 		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
