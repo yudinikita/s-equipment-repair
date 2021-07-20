@@ -19,4 +19,4 @@ jobs:
       - run: npm ci
       - run: npm run build
       # Deploy
-      - run: cd app && rsync -e "ssh -p 8228 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . s208534@ruvip51.hostiman.ru:/www/bytovoi-remont.ru
+      - run: cd app && rsync -e "ssh -p 8228 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . s208534@ruvip51.hostiman.ru:/var/www/s208534/data/www/bytovoi-remont.ru
