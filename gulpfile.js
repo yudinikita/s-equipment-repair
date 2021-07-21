@@ -118,6 +118,10 @@ const resources = () => {
   return src("./src/resources/**").pipe(dest("./app"));
 };
 
+const htaccess = () => {
+  return src("./src/resources/.htaccess").pipe(dest("./app"));
+};
+
 const images = () => {
   return src([
     "./src/img/**.jpg",
@@ -228,6 +232,7 @@ exports.build = series(
   scripts,
   styles,
   resources,
+  htaccess,
   images,
   svgSprites,
   svgSpritesBrand,
