@@ -133,6 +133,11 @@ Options -MultiViews
     RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
 </IfModule>
 
+# www.example.com → example.com
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.bytovoi-remont.ru$ [NC]
+RewriteRule ^(.*)$ https://bytovoi-remont.ru/$1 [R=301,L]
+
 ################
 # Защита сайта #
 ################
