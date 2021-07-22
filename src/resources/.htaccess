@@ -114,17 +114,8 @@ Options -MultiViews
     AddType text/x-component                            htc
 </IfModule>
 
-# Перенаправить с http:// на https://.
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{HTTPS} !=on
-    RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[\w-]+$
-    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-</IfModule>
-
 # www.example.com → example.com
 <IfModule mod_rewrite.c>
-    RewriteEngine On
     RewriteCond %{HTTPS} =on
     RewriteRule ^ - [E=PROTO:https]
     RewriteCond %{HTTPS} !=on
@@ -133,20 +124,12 @@ Options -MultiViews
     RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
 </IfModule>
 
-# www.example.com → example.com
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www.bytovoi-remont.ru$ [NC]
-RewriteRule ^(.*)$ https://bytovoi-remont.ru/$1 [R=301,L]
-
 ################
 # Защита сайта #
 ################
 
 # Включаем отслеживание сим-ссылок
 Options +FollowSymLinks
-
-# Запускаем url_rewriting
-RewriteEngine On
 
 # Блокируем все ссылки, содержащие &lt;script&gt;
 RewriteCond %{QUERY_STRING} (\&lt;|%3C).*script.*(\&gt;|%3E) [NC,OR]
