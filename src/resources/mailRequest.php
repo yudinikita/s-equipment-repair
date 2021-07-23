@@ -23,5 +23,11 @@ $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=UTF-8";
 $headers .= "From: Частные мастера <mail@bytovoi-remont.ru>\r\n";
 
-mail($to, $title, $text, $headers)
+if (mail($to, $title, $text, $headers)) {
+  header("Location: https://bytovoi-remont.ru/spasibo.html");
+  exit;
+}
+else {
+   echo ("Ошибка отправки! Попробуйте перезагрузить страницу.");
+}
 ?>
