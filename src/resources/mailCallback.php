@@ -11,8 +11,8 @@ $tel = trim($tel);
 
 
 $to = "nikitayudin782@gmail.com";
-$title = "Частные мастера";
-$text = "Имя: ".$name."\r\n"."Телефон: ".$tel;
+$title = "Обратный звонок • Частные мастера";
+$text = "Имя: ".$name."<br/>"."Телефон: ".$tel;
 $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=UTF-8";
 $headers .= "From: Частные мастера <mail@bytovoi-remont.ru>\r\n";

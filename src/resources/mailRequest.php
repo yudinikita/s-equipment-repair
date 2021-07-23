@@ -17,8 +17,13 @@ $msg = trim($msg);
 
 
 $to = "nikitayudin782@gmail.com";
-$title = "Частные мастера";
-$text = "Имя: ".$name."\r\n"."Телефон: ".$tel."\r\n"."Бренд: ".$select."\r\n"."Сообщение: ".$msg."\r\n";
+$title = "Заявка • Частные мастера";
+$fontstyle = "font-size: 20px";
+$text = "<b>Имя: </b>".$name."<br/>".
+        "<b>Телефон: </b>".$tel."<br/>".
+        "<b>Бренд: </b>".$select."<br/>".
+        "<b>Сообщение: </b>".$msg."<br/>".
+        $fontstyle;
 $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=UTF-8";
 $headers .= "From: Частные мастера <mail@bytovoi-remont.ru>\r\n";
