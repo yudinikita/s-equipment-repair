@@ -5,6 +5,8 @@
 - [Figma](https://www.figma.com/file/vwOlSFvUztthKTVeIUykO8/%D0%A0%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%BE%D0%B9-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8?node-id=64%3A2)
 - [Behance](https://www.behance.net/gallery/124883999/remont-stiralnyh-mashin-lending-UXUI)
 
+![page speed](https://pagespeed-insights.herokuapp.com?url=https://nblackninja.github.io/s-equipment-repair/ "page speed")
+
 ## Первый экран
 
 ![Первый экран](https://user-images.githubusercontent.com/36636599/145803392-77d35bf2-e26d-4174-8fd2-df3a92ee3a33.jpg)
