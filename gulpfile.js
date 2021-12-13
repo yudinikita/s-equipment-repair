@@ -18,6 +18,7 @@ const notify = require("gulp-notify");
 const image = require("gulp-image");
 const { readFileSync } = require("fs");
 const concat = require("gulp-concat");
+const ghPages = require("gulp-gh-pages");
 
 let isProd = false; // dev by default
 
@@ -213,6 +214,10 @@ const toProd = (done) => {
   done();
 };
 
+const deploy = () => {
+  return src("./build/**/*").pipe(ghPages());
+};
+
 exports.default = series(
   clean,
   htmlInclude,
@@ -252,3 +257,5 @@ exports.backend = series(
   svgSprites,
   svgSpritesBrand
 );
+
+exports.deploy = series(deploy);
