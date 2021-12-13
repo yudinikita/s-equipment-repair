@@ -1,6 +1,7 @@
 # Лендинг по ремонту стиральных машин
 
 Ссылки на проект
+- [Официальная страница](https://nblackninja.github.io/s-equipment-repair/)
 - [Figma](https://www.figma.com/file/vwOlSFvUztthKTVeIUykO8/%D0%A0%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%B1%D1%8B%D1%82%D0%BE%D0%B2%D0%BE%D0%B9-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8?node-id=64%3A2)
 - [Behance](https://www.behance.net/gallery/124883999/remont-stiralnyh-mashin-lending-UXUI)
 
