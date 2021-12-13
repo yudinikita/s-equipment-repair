@@ -1,4 +1,4 @@
 /node_modules
-/app
+/src
 *.zip
 workspace.code-workspace
