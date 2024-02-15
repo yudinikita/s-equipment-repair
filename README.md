@@ -34,4 +34,8 @@
 
 ![Мобильная версия](https://user-images.githubusercontent.com/36636599/145804234-dc7e9dcd-666f-486a-a1d2-f0de5a6cc158.jpg)
 
+---
 
+> Site [yudinikita.ru](https://yudinikita.ru) &nbsp;&middot;&nbsp;
+> Email <mail@yudinikita.ru> &nbsp;&middot;&nbsp;
+> GitHub [@yudinikita](https://github.com/yudinikita)
